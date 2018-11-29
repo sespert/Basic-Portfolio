@@ -2,6 +2,8 @@ body {
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
     background-image: url("../images/dust_scratches.png");
     margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -35,7 +37,6 @@ h1 {
     float: right;
     text-align: center;
     padding: 45px 10px 5px 10px;
-
 }
 
 a {
@@ -43,6 +44,11 @@ a {
     color: #777777;
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
     font-size: 18px;
+}
+
+a:hover {
+    color: #4aaaa5;
+    font-style: oblique;
 }
 
 a + a:before {
@@ -56,15 +62,9 @@ a + a:before {
     margin: 0 auto;
     margin-top: 50px;
     padding-bottom: 20px;
+    flex: 1 0 auto;
 }
-.container2 {
-    width: 960px;
-    height: 600px;
-    background-color: #ffffff;
-    margin: 0 auto;
-    margin-top: 50px;
-    padding-bottom: 20px;
-}
+
 
 h2 {
     color: #4aaaa5;
@@ -84,25 +84,36 @@ h2 {
     float: left;   
 }
 
+#imAbout:hover {
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
 p {
     margin-left: 20px;
+    margin-right: 20px;
     color: #777777;
     line-height: 1.5em;
 }
+
 .image { 
     position: relative; 
     float: left;
  }
 
+ #portIm:hover {
+     border-radius: 50%;
+ }
 
  .image #portIm {
     width: 200px;
     height: 180px;
     border: solid 5px #777777;
     margin: 10px 180px 10px 20px;
-   }
+}
  
-   .image .text {
+.image .text {
     color: #fff;
     background-color: #4aaaa5;
     font-size: 30px;
@@ -114,9 +125,7 @@ p {
     width: 200px;
     padding-top: 5px;
     padding-bottom: 5px;
-   }
-
-
+}
 
 input[type=text], select {
     width: 100%;
@@ -139,15 +148,15 @@ input[id=message] {
 }
 
 input[type=submit] {
-        width: 10%;
-        background-color: #4aaaa5;
-        color: white;
-        padding: 14px 20px;
-        margin: 8px 0;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 18px;
+    width: 10%;
+    background-color: #4aaaa5;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
 }
 
 input[type=submit]:hover {
@@ -164,6 +173,8 @@ footer {
     bottom: 0;
     width: 100%;
     height: 100px;
+    flex-shrink: 0;
+
 }
 
 #footer {
